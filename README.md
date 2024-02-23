@@ -17,13 +17,22 @@ go env -w GOPROXY=https://mirrors.aliyun.com/goproxy/,direct
 go env -w  GOPROXY=https://goproxy.io,direct
 
 在项目当前路径下执行
+
 1、下载依赖
+
 go mod tidy
+
 2、编译
+
 go build
+
 3、在当前路径得到可执行二进制文件
+
 ./waapPcap
 
-运行示例：./waapPcap -i ens1f1 -t http://192.168.1.1:8080 -f host 192.168.123.111 and dst port 9106 
+运行示例：
+
+./waapPcap -i ens1f1 -t http://192.168.1.1:8080 -f host 192.168.123.111 and dst port 9106 
+
 参数说明： -i 指定网卡 ，-f 设置过滤条件（和tcpdump一致），-t 设置waap防护地址
 
